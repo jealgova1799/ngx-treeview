@@ -9,6 +9,7 @@ export interface TreeviewSelection {
 export interface TreeItem {
   text: string;
   value: any;
+  parentId:any;
   disabled?: boolean;
   checked?: boolean;
   collapsed?: boolean;
@@ -22,6 +23,7 @@ export class TreeviewItem {
   private internalChildren: TreeviewItem[];
   text: string;
   value: any;
+  parentId:any;
 
   constructor(item: TreeItem, autoCorrectChecked = false) {
     if (isNil(item)) {
